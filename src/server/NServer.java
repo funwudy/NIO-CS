@@ -53,6 +53,7 @@ public class NServer {
 						key.cancel();
 						if (key.channel() != null) {
 							key.channel().close();
+							System.out.println("Close connection to " + sc.getRemoteAddress());
 						}
 					}
 					if (sb.length() > 0) {
